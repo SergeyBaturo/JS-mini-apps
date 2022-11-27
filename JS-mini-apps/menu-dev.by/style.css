@@ -1,0 +1,204 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:100,200,300,500,600,700,800,900);
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins';
+}
+
+.container {
+  max-width: 1150px;
+  margin: auto;
+  position: relative;
+}
+
+.container2 {
+  max-width: 384px;
+  margin: auto;
+}
+
+body {
+  background: #f5f5f7;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.bar {
+  margin-top: 20px!important;
+  padding-left: 0px!important;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.bar::before{
+  content: '\f0c9';
+  font-family: fontAwesome;
+}
+
+.bar.opened::before {
+  content: '\f00d';
+}
+
+.first-part {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-part a {
+  padding-left: 16px;
+  margin-top: 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.first-part a:hover {
+  color: #283cdc;
+}
+
+.first-part .heart, .menu .options .first-ul li .heart {
+  background: linear-gradient(to left, #333, #f43);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.first-part p {
+  padding-left: 16px;
+  margin-top: 12px;
+  font-size: 1.5em;
+  color: #283cdc;
+}
+
+.second-part button{
+  width: 60px;
+  height: 30px;
+  margin-top: 15px;
+  color: #333;
+  cursor: pointer;
+}
+
+.menu {
+  width: 416px;
+  height: 794px;
+  background: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, 8%);
+  border-radius: .5rem;
+  position: relative;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.menu.opened {
+  opacity: 1;
+  visibility: visible;
+}
+
+.menu .menu-language {
+  width: 100%;
+  border-bottom: 1px solid rgba(34,34,34,0.1);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 0px;
+}
+
+.menu .menu-language button.language {
+  width: 384px;
+  height: 40px;
+  background: #f5f5f5;
+  border: 1px solid rgba(0, 0, 0, 8%);
+  border-radius: .5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: .7rem;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.menu .menu-language button.language:hover {
+  border: 1px solid rgba(0, 0, 0, .5);
+}
+
+.menu .menu-search {
+  width: 100%;
+  border-bottom: 1px solid rgba(34,34,34,0.1);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  left: 0px;
+  top: 95px;
+}
+
+.menu .menu-search .search {
+  width: 100%;
+  border: none;
+  padding: 16px;
+  background: #f5f5f5;
+  outline: none;
+}
+
+.menu .menu-search .search:focus {
+  background: #fff;
+}
+
+.menu .menu-search button {
+  border-width: 0px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.menu .menu-search button.focused {
+  background-color: #fff;
+}
+
+.menu .menu-search button i {
+  padding: 0 16px;
+  cursor: pointer;
+}
+
+.menu .options {
+  position: absolute;
+  top: 170px;
+  left: 0px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid rgba(34,34,34,0.1);
+  padding-bottom: .5rem;
+}
+
+.menu .options li {
+  list-style: none;
+  padding: 8px 16px;
+}
+
+.menu .options li a:hover {
+  color: #283cdc;
+}
+
+.menu .options li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+}
+
+.side-info {
+  position: absolute;
+  left: 0px;
+  bottom: 16px;
+}
+
+.side-info ul li {
+  list-style: none;
+  padding: 4px 16px;
+}
+
+.side-info ul li a {
+  color: rgba(34,34,34,0.6);
+  text-decoration: none;
+  font-size: 14px;
+}
