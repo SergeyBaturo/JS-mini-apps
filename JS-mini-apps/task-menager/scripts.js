@@ -1,8 +1,9 @@
 const taskName = document.querySelector('.task-name');
-const add = document.querySelector('#add');
 const ul = document.querySelector('ul');
+const form = document.querySelector('#add');
 
-add.addEventListener('click', () => {
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
   let li = document.createElement('li');
   const checkBox = document.createElement('input');
   checkBox.type = 'checkbox';
@@ -15,10 +16,10 @@ add.addEventListener('click', () => {
   ul.appendChild(li);
   checkBox.addEventListener('click', () => {
     li.classList.toggle('throughed');
-    if (li.classList == 'troughed') {
-      ul.prepend(li);
+    if (checkBox.checked) {
+      ul.append(li);
     } else {
-      ul.appendChild(li);
+      ul.prepend(li);
     }
   });
   cross.addEventListener('click', () => {li.remove()});

@@ -33,23 +33,26 @@
       Recusandae velit deleniti rerum assumenda consequatur doloribus debitis ipsam, reprehenderit eveniet laudantium ducimus quos sit libero aliquid dolore, maiores, iure enim? Tempora ex exercitationem, possimus dolorem nesciunt animi vero eaque.</p>
     </main>
   </div>
-  <div class="menu closed">
-    <button id="menu-closer">X</button>
-    <div class="links">
-      <button id="popupBtn2"> Lorem </button>
-      <a href="#"> Lorem </a>
-      <a href="#"> Lorem </a>
-      <a href="#"> Lorem </a>
+  <div class="side-menu" id="navigation">
+    <div id="navigation-content">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our Works</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contacts</a></li>
+        <li><a href="#">Donate</a></li>
+      </ul>
     </div>
   </div>
-  <div class="popup closed" id="popup">
-    <div class="popup_content">
-      <button class="popup-close">X</button>
-      <h2>Заголовк модального окна</h2>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis delectus nemo eos voluptate adipisci, ad cum cupiditate iusto, eveniet laborum doloribus vitae, illum cumque! Voluptas rerum earum enim sint nulla.</p>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, aperiam error? Soluta tempora dolorem repellat enim cupiditate dolor quas minima possimus asperiores, aliquam voluptas laborum accusantium corrupti, fugit quis harum.</p>
-    </div>
-  </div>
-  <script src="scripts.js"></script>
+  <script>
+    const body = document.querySelector('body');
+    const navigation = document.querySelector('#navigation');
+    const menuOpener = document.querySelector('#menuOpen');
+    const menuBtn = document.querySelector('.fa-bars');
+    menuOpener.addEventListener('click', () => {
+    body.classList.toggle('active');
+    navigation.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
